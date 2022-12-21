@@ -1,0 +1,97 @@
+git config --global user.name ""
+git config --global user.email ""
+git config --global init.default branch main
+
+git config -h
+git help config
+
+git init -> It will initialize the git inside folder
+
+git add <file_name> we use this command to track the files or add to local repositoy
+git rm --cached <file_name> To untrack the file or whatever we added above file, just remove from local repository
+
+Create a file .gitignore
+We can include file which we no need to commit 
+ex: *.txt -> any file ends with txt. 
+
+To track all the file at a time we have different ways
+git add --all
+git add -A 
+git add . 
+
+git commit -m "Some message" -> It will commit the files into local repository
+
+git diff <file_name> to check what are the chanegs are done. 
+
+After adding file to staging, if want to remove 
+git restore --staged <file_name>
+
+To avoid staging step
+git commit -a -m "message" -> Before this we no need to use git add, this will tacare. 
+
+To delete a file from local repository
+git rm "<file_name>"
+
+To restore same file
+git restore --staged "<file_name>"
+git restore "<file_name>"
+
+To rename file
+git mv "OldName" "new Name"
+
+git log 
+git log --oneline
+
+To update last commit message
+git commit -m "chage message you need" --amend 
+
+git log -p -> To see all the changes. 
+
+git rebase -i --root
+git rebase --quit
+
+To create a new branch
+bit branch <branch-name>
+
+git switch <branch_name>
+
+Merging:
+switch to branch to which one we have to merge first
+then follow the below command. 
+git merge -m "message" <branch_name>
+
+After merging we can delete that branch
+git branch -d <branchname>
+
+Another way to create a new branch
+git switch -c <branchName>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+…or create a new repository on the command line
+echo "# GIT-commands" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/DharmaRayudu/GIT-commands.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/DharmaRayudu/GIT-commands.git
+git branch -M main
+git push -u origin main
+
